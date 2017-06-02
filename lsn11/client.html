@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+</head>
+<body>
+<script>
+    var ws = new WebSocket('ws://127.0.0.1:6080/ws');
+
+    ws.onopen = function (ev) {
+        alert("open");
+        console.log(ev);
+        ws.send("websocket");
+    };
+    ws.onerror = function (ev) {
+        alert("error");
+        console.log(ev);
+    };
+
+    ws.onclose = function (ev) {
+        alert("close");
+        console.log(ev);
+    };
+
+    ws.onmessage=function (ev) {
+        alert(ev.data);
+    }
+</script>
+</body>
+</html>

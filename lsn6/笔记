@@ -1,0 +1,3 @@
+了解setTimeout, setInterval
+nodeJS是事件驱动的，当接收到事件的时候执行事件，如果没有事件会退出程序
+progress全局模块
